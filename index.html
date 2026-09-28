@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pametni Auto-Cutoff Punjač – Brza Narudžba</title>
+    <style>
+        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
+        body { background-color: #f4f7f6; color: #333; padding: 20px 10px; }
+        .container { max-width: 500px; margin: 0 auto; background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        h2 { text-align: center; color: #1a1a1a; margin-bottom: 10px; font-size: 22px; }
+        p.subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 20px; }
+        .product-card { background: #eef6ff; border: 1px solid #cce3ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+        .product-title { font-weight: bold; color: #0066cc; font-size: 16px; }
+        .product-price { font-size: 20px; font-weight: bold; color: #2d8a4e; margin-top: 5px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px; color: #444; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; outline: none; transition: 0.3s; }
+        input:focus, select:focus, textarea:focus { border-color: #0066cc; box-shadow: 0 0 5px rgba(0,102,204,0.3); }
+        .btn-submit { width: 100%; background: #28a745; color: #fff; border: none; padding: 15px; font-size: 18px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+        .btn-submit:hover { background: #218838; }
+        .badge { display: inline-block; background: #ffc107; color: #000; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="text-align: center;">
+        <span class="badge">Plaćanje pouzećem (Sigurna kupovina)</span>
+    </div>
+    <h2>Naručite Pametni Punjač</h2>
+    <p class="subtitle">Automatski prekida struju na 100% i čuva vašu bateriju.</p>
+
+    <div class="product-card">
+        <div class="product-title">⚡ Smart Auto-Cutoff Punjač</div>
+        <div class="product-price">29 KM <span style="text-decoration: line-through; color: #888; font-size: 14px;">39 KM</span></div>
+    </div>
+
+    <!-- Forma za narudžbu -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+        <!-- Zamijeni sa svojim Web3Forms ključem -->
+        <input type="hidden" name="access_key" value="TVOJ_ACCESS_KEY_OVDJE">
+        <input type="hidden" name="subject" value="Nova Narudžba - Pametni Punjač!">
+        <input type="hidden" name="from_name" value="Prodavnica Punjača">
+
+        <div class="form-group">
+            <label for="name">Ime i Prezime *</label>
+            <input type="text" id="name" name="Ime i Prezime" placeholder="npr. Marko Marković" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Broj telefona *</label>
+            <input type="tel" id="phone" name="Broj Telefona" placeholder="npr. 061 123 456" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Adresa za dostavu *</label>
+            <input type="text" id="address" name="Adresa" placeholder="Ulica i broj" required>
+        </div>
+
+        <div class="form-group">
+            <label for="city">Grad i Poštanski broj *</label>
+            <input type="text" id="city" name="Grad" placeholder="npr. Sarajevo 71000" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cable">Tip priključka *</label>
+            <select id="cable" name="Tip Priključka" required>
+                <option value="" disabled selected>Odaberite odgovarajući kabal</option>
+                <option value="Type-C">Type-C (Android / novi iPhone 15/16)</option>
+                <option value="Lightning">Lightning (iPhone 14 i stariji)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="note">Napomena za kurira (opcionalno)</label>
+            <textarea id="note" name="Napomena" rows="2" placeholder="Npr. zvoniti na interfon..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">POTVRDI NARUDŽBU (29 KM)</button>
+    </form>
+</div>
+
+</body>
+</html>
